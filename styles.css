@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    background-color: #333;
+    color:white;
+    padding: 1rem;
+}
+.nav-links{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+.nav-links li{
+    padding: 0.5rem;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+}
+.menu-icon{
+    display: none;
+    cursor: pointer;
+
+}
+input[type="checkbox"]{
+    display: none;
+}
+@media (max-width:600px){
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu-icon{
+        display: block;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+    input[type="checkbox"]:checked + .menu-icon + .nav-links{
+        display: flex;
+    }
+}
